@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="ad.size" content="width=980,height=250">
+    <title>2010_TRANSIT_TRAIL_N_LC_N_D_300X250_es_ES</title>
+    
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>    
+    
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.20.0_d360d9a082ccc13b1a1a9b153f86b378_min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+<script>
+    var clickTag = "https://www.google.com";
+    
+    // DoubleClick Select
+    var dcSelect = true;
+    
+    // DoubleClick Polite Load Select
+    var politeLoad = true;
+</script>
+    
+</head>
+<body>
+    
+    <div class="stopwatch" style="opacity: 0"></div>
+<div id="content" style="opacity: 0">
+
+    <div id="main"></div>
+
+    <div id="cta_all">
+        <div id="cta_1_bg" class="cta_position"></div>
+        <div id="cta_2_bg" class="cta_position"></div>
+        <img src="" id="cta_1" class="cta_position">            
+    </div>
+
+    <div id="terms_overlay" class="ad_size"></div>
+    <div id="terms_copy" class="ad_size"></div>
+
+    <div id="whiteout"></div>
+    <div id="plinth" class="ad_size"></div>
+    
+    <div id="border" class="ad_size"></div>
+    
+    <a href="javascript: void(0);" onclick="javascript: clicktag_Click();">
+        <div id="clicktag"></div>
+    </a>
+    
+    <div id="terms_btn" onclick="termsEnter()" onmouseenter="termsEnter()" onmouseleave="termsLeave()"></div>
+    
+</div>
+
+<script>
+// -------------------- (01) - first stage -------------------- //
+    window.onload = function start() {
+        if (typeof TimelineMax !== 'undefined') {
+            dcSelect ? dcLoad() : stLoad(); // inside script.js
+        }
+        else {
+            
+            setTimeout(function(){ start() }, 300);
+        }
+    }
+</script>
+    
+<script>
+    "use strict";var _createClass=function(){function t(t,e){for(var i=0;i<e.length;i++){var n=e[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(t,n.key,n)}}return function(e,i,n){return i&&t(e.prototype,i),n&&t(e,n),e}}();function _classCallCheck(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}var Stopwatch=function(){function t(e,i){_classCallCheck(this,t),this.running=!1,this.display=e,this.results=i,this.laps=[],this.reset(),this.print(this.times)}return _createClass(t,[{key:"reset",value:function(){this.times=[0,0,0]}},{key:"start",value:function(){this.time||(this.time=performance.now()),this.running||(this.running=!0,requestAnimationFrame(this.step.bind(this)))}},{key:"lap",value:function(){var t=this.times,e=document.createElement("li");e.innerText=this.format(t),this.results.appendChild(e)}},{key:"stop",value:function(){this.running=!1,this.time=null}},{key:"step",value:function(t){this.running&&(this.calculate(t),this.time=t,this.print(),requestAnimationFrame(this.step.bind(this)))}},{key:"calculate",value:function(t){var e=t-this.time;this.times[2]+=e/10,this.times[2]>=100&&(this.times[1]+=1,this.times[2]-=100),this.times[1]>=60&&(this.times[0]+=1,this.times[1]-=60)}},{key:"print",value:function(){this.display.innerText=this.format(this.times)}},{key:"format",value:function(t){return pad0(t[0],2)+":"+pad0(t[1],2)+":"+pad0(Math.floor(t[2]),2)}}]),t}();function pad0(t,e){for(var i=t.toString();i.length<e;--e)i="0"+i;return i}function clearChildren(t){for(;t.lastChild;)t.removeChild(t.lastChild)}var stopwatch=new Stopwatch(document.querySelector(".stopwatch"),document.querySelector(".results"));
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+body { margin: 0px; padding: 0px; background-color: transparent; }
+/* div { position: absolute } */
+.ad_size { position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; }
+
+#content, #main, #whiteout, #border, #clicktag {
+    position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;
+}
+
+#whiteout { background-color: black; }
+#plinth { 
+    background-size: contain; 
+    background-image: url("plinth.png");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+#border { box-sizing: border-box; border: 1px solid #102b4e; }
+
+#content {
+    background-color: white;
+    overflow: hidden;
+    /* perspective: 1000px; */
+}
+
+
+
+.image {
+    transform: translate3d(0px, 0px, 0px) scale(1);
+    transform-origin: top left;
+    position: absolute; top: 0px; left: 0px;
+    width: auto; height: auto;
+    
+    /* scale blur bugFix */
+    /* backface-visibility: hidden;
+    -webkit-filter: blur(0); */
+}
+
+
+#bg, #car_mask {
+    transform: translate3d(0px, 0px, 0px) scale(0.5) rotate(0.01deg);
+    transform-origin: center center;
+    top: -60%; left: -61%;
+}
+
+
+#copy_1, #copy_2, #copy_3 {
+    transform: translate3d(0px, 0px, 0px) scale(0.9);
+    transform-origin: top;
+    position: absolute; top: 0px; left: 0px;
+    top: 16px; left: -8px;
+
+}
+
+/* ------------------------------ CTA - Start ----------------------------- */
+
+#cta_all {
+    width: auto; height: auto; position: absolute;
+    bottom: 25px; right: 50px;
+
+}
+
+.cta_position {
+    width: 110px; height: 18px; position: absolute; 
+}
+
+#cta_1 {
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden; color: #fff;
+}
+
+#cta_2 {
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden; color: #102b4e;
+    opacity: 0;
+}
+
+#cta_1_bg {
+    background-color: #102b4e;
+}
+
+#cta_2_bg {
+    background-color: #ffffff; 
+    opacity: 0;
+}
+
+/* ------------------------------ CTA - End ----------------------------- */
+
+/* ------------------------------ Terms - Start ----------------------------- */
+
+#terms_btn {
+    position: absolute; background-color: aqua; opacity: 0;
+    pointer-events: none; cursor: pointer;
+    top: 160px; left: 10px;
+    width: 120px; height: 23px;
+}
+
+#terms_copy {
+    position: absolute; background-size: contain;
+    /*background-image: url("terms_copy.png");*/
+}
+
+#terms_overlay {
+    position: absolute; background-size: contain; opacity: 0;
+    background-color: rgba(0,0,0,0.7);
+    top: 0px; left: 0px;
+}
+
+@-webkit-keyframes terms_overlay_animation_over {from {opacity: 0} to {opacity: 1} }
+
+@keyframes terms_overlay_animation_over {from {opacity: 0} to {opacity: 1} }
+@-webkit-keyframes terms_overlay_animation_out {from {opacity: 1} to {opacity: 0} }
+@keyframes terms_overlay_animation_out {from {opacity: 1} to {opacity: 0} }
+
+/* ------------------------------ Terms - End ----------------------------- */
